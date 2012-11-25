@@ -1,0 +1,11 @@
+backup your current setup of add-start, simply copy /usr/local/bin/add-start to a safe location.
+copy ./add-start to /usr/local/bin/add-start
+give it execute permissions
+chmod 755 /usr/local/bin/add-start
+
+copy desktop_tool.py to /usr/local/bin/desktop_tool.py as root
+    cp ./desktop_tool.py /usr/local/bin/desktop_tool.py
+and give it execute permisions
+    chmod 755 /usr/local/bin/desktop_tool.py
+    
+run add-start as you normally do to enjoy.
