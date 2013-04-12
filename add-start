@@ -32,7 +32,7 @@ import sys
 
 USER_HOME = os.environ['HOME']
 DISPLAY = os.environ['DISPLAY']
-with open(USER_HOME+"/.antix-session/desktop-code"+DISPLAY, "r") as f:
+with open(USER_HOME+"/.antiX-session/desktop-code"+DISPLAY, "r") as f:
   DESKTOP = f.readline()
   DESKTOP = re.sub(r'\n', '', DESKTOP)
 DESKTOP = re.sub(r'.*-', '', DESKTOP)
