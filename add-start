@@ -30,13 +30,13 @@ import re
 import os
 import sys
 
-DESKTOP = os.environ['DESKTOP_CODE']
-DESKTOP = re.sub(r'rox-', '', DESKTOP)
 USER_HOME = os.environ['HOME']
-print DESKTOP
-print USER_HOME
-LOCATION=(USER_HOME+"/."+DESKTOP+"/startup")
-print LOCATION
+DISPLAY = os.environ['DISPLAY']
+with open(USER_HOME+"/.antix-session/desktop-code"+DISPLAY, "r") as f:
+  DESKTOP = f.readline()
+  DESKTOP = re.sub(r'\n', '', DESKTOP)
+DESKTOP = re.sub(r'.*-', '', DESKTOP)
+LOCATION=(USER_HOME+"/."+DESKTOP+"/keys")
 
 class Error:
     def __init__(self, error):
